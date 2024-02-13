@@ -89,6 +89,9 @@ const Cart = () => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
     setMeals(cartItems);
+
+    document.getElementById("cartNotif").innerHTML =
+      cartItems.length > 0 ? cartItems.length : "";
   };
 
   const handlePurchase = () => {

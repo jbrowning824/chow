@@ -63,6 +63,9 @@ const MenuCardUntitled = (props) => {
 
     // do not redirect
     // navigate("/cart");
+
+    document.getElementById("cartNotif").innerHTML =
+      cartItems.length > 0 ? cartItems.length : "";
   };
 
   return (
