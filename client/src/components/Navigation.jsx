@@ -142,14 +142,18 @@ function Navigation(props) {
                 <h3 className="bi bi-person"></h3>
               </NavLink>
             </NavItem>
-            <NavItem className="px-1">
-              <NavLink style={styles.linkIcons} tag={Link} to="/cart">
-                <div style={{ position: "relative" }}>
-                  <h3 className="bi bi-bag-heart"></h3>
-                  <span style={styles.cartBadge} id="cartNotif"></span>
-                </div>
-              </NavLink>
-            </NavItem>
+            {Auth.loggedIn() ? (
+              <NavItem className="px-1">
+                <NavLink style={styles.linkIcons} tag={Link} to="/cart">
+                  <div style={{ position: "relative" }}>
+                    <h3 className="bi bi-bag-heart"></h3>
+                    <span style={styles.cartBadge} id="cartNotif"></span>
+                  </div>
+                </NavLink>
+              </NavItem>
+            ) : (
+              <span style={styles.cartBadge} id="cartNotif"></span>
+            )}
           </Nav>
         </Collapse>
       </Navbar>
