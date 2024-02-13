@@ -159,7 +159,7 @@ function Navigation(props) {
                 </NavLink>
               </NavItem>
             ) : (
-              <span style={styles.cartBadge} id="cartNotif"></span>
+              <span className="d-none" id="cartNotif"></span>
             )}
           </Nav>
         </Collapse>
