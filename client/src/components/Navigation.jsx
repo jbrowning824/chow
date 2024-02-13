@@ -104,11 +104,6 @@ function Navigation(props) {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink style={styles.link} tag={Link} to="/reviews">
-                Reviews
-              </NavLink>
-            </NavItem>
-            <NavItem>
               <NavLink style={styles.link} tag={Link} to="/partner">
                 Become our Partner
               </NavLink>
