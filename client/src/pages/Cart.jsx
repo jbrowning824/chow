@@ -105,8 +105,13 @@ const Cart = () => {
 
     setMeals(cartItems);
 
+    let quantityHolder = 0;
+    for (let cartItem of cartItems) {
+      quantityHolder += cartItem.quantity;
+    }
+
     document.getElementById("cartNotif").innerHTML =
-      cartItems.length > 0 ? cartItems.length : "";
+      quantityHolder > 0 ? quantityHolder : "";
 
     if (data) {
       data.createPaymentIntent = undefined;
@@ -151,6 +156,15 @@ const Cart = () => {
 
     // update storage
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+    // update badge
+    let quantityHolder = 0;
+    for (let cartItem of cartItems) {
+      quantityHolder += cartItem.quantity;
+    }
+
+    document.getElementById("cartNotif").innerHTML =
+      quantityHolder > 0 ? quantityHolder : "";
 
     setTotal(getTotalPurchase());
 
