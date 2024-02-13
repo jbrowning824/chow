@@ -72,7 +72,7 @@ const ExploreOurMenu = () => {
         )}
         <div className="text-center">
           <Link to="/#our-full-menu" style={{ textDecoration: "none" }}></Link>
-          <Button className="btn btn-lg" outline tag={Link} to="#">
+          <Button className="btn btn-lg" outline tag={Link} to="#our-full-menu">
             View More
           </Button>
         </div>
